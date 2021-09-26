@@ -28,8 +28,7 @@ export default function Home() {
       name: newSkill,
     };
     if (
-      mySkills.toString().toLowerCase().includes(newSkill.toLowerCase()) ===
-        true ||
+      mySkills.find(element => element.name === newSkill) ||
       newSkill === ''
     ) {
       return null;
